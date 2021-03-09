@@ -2,6 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## About this app
+
+This is a basic Frontapp.com custom plugin. You can view a demo of this app at https://frosty-golick-45139c.netlify.app, and feel free to use this as a demo by adding this URL as a plugin in Front.
+
 ## Available Scripts
 
 In the project directory, you can run:
