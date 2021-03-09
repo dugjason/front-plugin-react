@@ -22,6 +22,21 @@ function App() {
         >
           Learn React
         </a>
+
+        <br />
+        <p>Below is an anchor wrapped in a div. Anchor takes us to reactjs.org. div onClick takes us to Frontapp.com</p>
+        <div onClick={() => {
+          console.log('div was clicked')
+          Front.openUrl('https://example.com')
+        }}>
+          <a 
+            href="https://reactjs.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+          Click this. 
+          </a>
+        </div>
       </header>
     </div>
   );
