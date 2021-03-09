@@ -24,7 +24,7 @@ function App() {
         </a>
 
         <br />
-        <p>Below is an anchor wrapped in a div. Anchor takes us to reactjs.org. div onClick takes us to Frontapp.com</p>
+        <p>Below is an anchor wrapped in a div. Anchor takes us to reactjs.org. div onClick takes us to example.com</p>
         <div onClick={() => {
           console.log('div was clicked')
           Front.openUrl('https://example.com')
