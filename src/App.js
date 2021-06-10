@@ -1,9 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
+import { FileDrop } from 'react-file-drop';
 import Front from '@frontapp/plugin-sdk';
 
 
 function App() {
+  const styles = { border: '1px solid black', color: 'black', padding: 20 };
+
   return (
     <div className="App">
       <header className="App-header">
@@ -22,22 +25,21 @@ function App() {
         >
           Learn React
         </a>
-
-        <br />
-        <p>Below is an anchor wrapped in a div. Anchor takes us to reactjs.org. div onClick takes us to example.com</p>
-        <div onClick={() => {
-          console.log('div was clicked')
-          Front.openUrl('https://example.com')
-        }}>
-          <a 
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-          Click this. 
-          </a>
-        </div>
       </header>
+
+      <div style={styles}>
+        <FileDrop
+          onFrameDragEnter={(event) => console.log('onFrameDragEnter', event)}
+          onFrameDragLeave={(event) => console.log('onFrameDragLeave', event)}
+          onFrameDrop={(event) => console.log('onFrameDrop', event)}
+          onDragOver={(event) => console.log('onDragOver', event)}
+          onDragLeave={(event) => console.log('onDragLeave', event)}
+          onDrop={(files, event) => console.log('onDrop!', files, event)}
+        >
+          Drop some files here!
+        </FileDrop>
+      </div>
+
     </div>
   );
 }
